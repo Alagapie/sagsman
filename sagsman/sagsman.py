@@ -28,7 +28,7 @@ def code(input_text):
         }
     )
     return response.content
-st.title('👨‍💻  Alagapie CodeGenie')
+st.title('Barbet Coin')
 
 
 # Initialize chat session in Streamlit if not already present
@@ -36,7 +36,7 @@ if 'code_chat_history' not in st.session_state:
      st.session_state.code_chat_history = []
 
 # Input field for user's message
-input = st.chat_input("Ask Gemini-Pro...")
+input = st.chat_input("Ask barbet coin...")
 if st.button("Start a New Chat"):
        st.session_state.code_chat_history = []
 
@@ -45,7 +45,7 @@ if input:
      st.session_state.code_chat_history.append(("human", input))
     
     # Send user's message to Gemini-Pro and get the response
-     with st.spinner("Generating code..."):
+     with st.spinner("Generating answer"):
             # Send user's message to Gemini-Pro and get the response
             gemini_response = code(input)
     
